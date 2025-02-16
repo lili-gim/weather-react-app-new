@@ -78,7 +78,7 @@ export default function Weather(props) {
 
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
 
-    axios.get(apiUrl).tnen(handleResponse);
+    axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
   }
