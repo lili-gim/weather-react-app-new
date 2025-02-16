@@ -7,7 +7,6 @@ import FormattedDate from "./FormattedDate";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       ready: true,
       date: new Date(response.data.dt * 1000),
@@ -78,6 +77,7 @@ export default function Weather(props) {
     const apiKey = "c20161a98fff44a06b23236e2obd0t3b";
 
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
+
     axios.get(apiUrl).tnen(handleResponse);
 
     return "Loading...";
