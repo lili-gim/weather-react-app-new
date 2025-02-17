@@ -15,7 +15,7 @@ export default function Weather(props) {
       precipitation: 0,
       city: response.data.city,
       wind: response.data.wind.speed,
-      humiidity: response.data.temperature.humiidity,
+      humidity: response.data.temperature.humidity,
       iconUrl:
         "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png",
       description: response.data.condition.description,
@@ -55,7 +55,7 @@ export default function Weather(props) {
               <div className="col-5">
                 <ul>
                   <li>Precipitation: {weatherData.precipitation}</li>
-                  <li>Humidity: {weatherData.humiidity}</li>
+                  <li>Humidity: {weatherData.humidity}%</li>
                   <li>Wind: {weatherData.wind}</li>
                 </ul>
               </div>
