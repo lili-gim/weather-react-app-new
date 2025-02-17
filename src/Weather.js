@@ -7,17 +7,18 @@ import FormattedDate from "./FormattedDate";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
+    console.log(response);
     setWeatherData({
       ready: true,
       date: new Date(response.data.dt * 1000),
-      temperature: response.data.main.temp,
+      temperature: response.data.temperature,
       precipitation: 0,
-      city: response.data.main.name,
+      city: response.data.city,
       wind: response.data.wind.speed,
-      humiidity: response.data.main.humiidity,
+      humiidity: response.data.temperature.humiidity,
       iconUrl:
         "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png",
-      description: response.data.weather[0].description,
+      description: response.data.condition.description,
     });
   }
   if (weatherData.ready) {
