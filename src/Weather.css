@@ -39,7 +39,7 @@
   list-style: none;
 }
 
-.Weather img {
+.Weather canvas {
   display: inline-block;
   border: 0;
   height: 60px;
