@@ -42,8 +42,6 @@
 .Weather canvas {
   display: inline-block;
   border: 0;
-  height: 60px;
-  width: 60px;
 }
 
 footer {
