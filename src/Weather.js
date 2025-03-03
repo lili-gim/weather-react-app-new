@@ -20,6 +20,7 @@ export default function Weather(props) {
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
       icon: response.data.condition.icon,
+      coordinates: response.data.coordinates,
     });
   }
 
@@ -59,7 +60,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo info={weatherData} />
-        <WeahterForecast />
+        <WeahterForecast coord={weatherData.coordinates} />
       </div>
     );
   } else {
