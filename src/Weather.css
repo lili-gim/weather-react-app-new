@@ -31,6 +31,7 @@
   font-size: 48px;
   letter-spacing: 0;
   line-height: 56px;
+  padding: 0;
 }
 .Weather li {
   color: #5e5e5e;
@@ -40,11 +41,14 @@
 }
 
 .Weather canvas {
-  display: inline-block;
-  border: 0;
+  margin: 10px auto;
 }
 
 footer {
   text-align: center;
   margin-top: 10px;
+}
+
+.unit {
+  vertical-align: top;
 }
